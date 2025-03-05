@@ -1,47 +1,50 @@
 from datasets import load_dataset, DatasetDict
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM
+from transformers import TrainingArguments, Trainer
+# Following the guide given by Shangbin: https://huggingface.co/docs/transformers/en/tasks/language_modeling
 
-def tokenize(element):
-    outputs = tokenizer(
-        element["text"],
-        truncation=True,
-        return_overflowing_tokens=True,
-        return_length=True,
-    )
-    input_batch = []
-    for length, input_ids in zip(outputs["length"], outputs["input_ids"]):
-        if length == context_length:
-            input_batch.append(input_ids)
-    return {"input_ids": input_batch}
-
-
-
-
-
-
-ds_right = load_dataset("text", data_files="./partisan_media/test_data.txt")
-#load_dataset("text", data_files={"train": ["my_text_1.txt", "my_text_2.txt"], "test": "my_test_file.txt"})
-#dataset_dict = DatasetDict(
-#    {
-#        "train": ds_right,  # .shuffle().select(range(50000)),
-#    }
-#)
+def tokenize_fcn(example):
+	return tokenizer(example["text"])
+MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+ds_right = load_dataset("text", data_files="./partisan_media/reddit_right.txt")
 
 print(ds_right)
 print(ds_right['train'][0])
-#print(dataset_dict["train"]['train'][0])
-tokenizer = AutoTokenizer.from_pretrained("deepseek-ai/DeepSeek-R1-Distill-Qwen-7B")
-
-outputs = tokenizer(
-    ds_right['train']["text"],
-    truncation=True,
-    return_overflowing_tokens=True,
-    return_length=True,
-)
-
-print(outputs)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 tokenized_datasets = ds_right.map(
-    tokenize, batched=True, remove_columns=ds_right["train"].column_names
+    tokenize_fcn, batched=True, num_proc=4,remove_columns=ds_right["train"].column_names
 )
 print(tokenized_datasets)
+print(tokenized_datasets['train'][0])
+
+from transformers import DataCollatorForLanguageModeling
+
+tokenizer.pad_token = tokenizer.eos_token
+data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+
+
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_NAME, torch_dtype="auto", device_map="auto"
+)
+
+training_args = TrainingArguments(
+    output_dir="reddit_right_deepseek",
+    eval_strategy="no",
+    learning_rate=1e-4,
+    weight_decay=1e-5,
+	per_device_train_batch_size=1,
+	optim='schedule_free_radam',
+	num_train_epochs=1,
+    push_to_hub=False,
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_datasets["train"],
+    data_collator=data_collator,
+    tokenizer=tokenizer,
+)
+
+trainer.train()
