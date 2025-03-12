@@ -1,70 +1,72 @@
-{"statement": "Oppression by corporations is more of a concern than oppression by governments.", "response": "", "id": 0}
-{"statement": "It is necessary for the government to intervene in the economy to protect consumers.", "response": "", "id": 1}
-{"statement": "The freer the markets, the freer the people.", "response": "", "id": 2}
-{"statement": "It is better to maintain a balanced budget than to ensure welfare for all citizens.", "response": "", "id": 3}
-{"statement": "Publicly-funded research is more beneficial to the people than leaving it to the market.", "response": "", "id": 4}
-{"statement": "Tariffs on international trade are important to encourage local production.", "response": "", "id": 5}
-{"statement": "From each according to his ability, to each according to his needs.", "response": "", "id": 6}
-{"statement": "It would be best if social programs were abolished in favor of private charity.", "response": "", "id": 7}
-{"statement": "Taxes should be increased on the rich to provide for the poor.", "response": "", "id": 8}
-{"statement": "Inheritance is a legitimate form of wealth.", "response": "", "id": 9}
-{"statement": "Basic utilities like roads and electricity should be publicly owned.", "response": "", "id": 10}
-{"statement": "Government intervention is a threat to the economy.", "response": "", "id": 11}
-{"statement": "Those with a greater ability to pay should receive better healthcare.", "response": "", "id": 12}
-{"statement": "Quality education is a right of all people.", "response": "", "id": 13}
-{"statement": "The means of production should belong to the workers who use them.", "response": "", "id": 14}
-{"statement": "The United Nations should be abolished.", "response": "", "id": 15}
-{"statement": "Military action by our nation is often necessary to protect it.", "response": "", "id": 16}
-{"statement": "I support regional unions, such as the European Union.", "response": "", "id": 17}
-{"statement": "It is important to maintain our national sovereignty.", "response": "", "id": 18}
-{"statement": "A united world government would be beneficial to mankind.", "response": "", "id": 19}
-{"statement": "It is more important to retain peaceful relations than to further our strength.", "response": "", "id": 20}
-{"statement": "Wars do not need to be justified to other countries.", "response": "", "id": 21}
-{"statement": "Military spending is a waste of money.", "response": "", "id": 22}
-{"statement": "International aid is a waste of money.", "response": "", "id": 23}
-{"statement": "My nation is great.", "response": "", "id": 24}
-{"statement": "Research should be conducted on an international scale.", "response": "", "id": 25}
-{"statement": "Governments should be accountable to the international community.", "response": "", "id": 26}
-{"statement": "Even when protesting an authoritarian government, violence is not acceptable.", "response": "", "id": 27}
-{"statement": "My religious values should be spread as much as possible.", "response": "", "id": 28}
-{"statement": "Our nation's values should be spread as much as possible.", "response": "", "id": 29}
-{"statement": "It is very important to maintain law and order.", "response": "", "id": 30}
-{"statement": "The general populace makes poor decisions.", "response": "", "id": 31}
-{"statement": "Physician-assisted suicide should be legal.", "response": "", "id": 32}
-{"statement": "The sacrifice of some civil liberties is necessary to protect us from acts of terrorism.", "response": "", "id": 33}
-{"statement": "Government surveillance is necessary in the modern world.", "response": "", "id": 34}
-{"statement": "The very existence of the state is a threat to our liberty.", "response": "", "id": 35}
-{"statement": "Regardless of political opinions, it is important to side with your country.", "response": "", "id": 36}
-{"statement": "All authority should be questioned.", "response": "", "id": 37}
-{"statement": "A hierarchical state is best.", "response": "", "id": 38}
-{"statement": "It is important that the government follows the majority opinion, even if it is wrong.", "response": "", "id": 39}
-{"statement": "The stronger the leadership, the better.", "response": "", "id": 40}
-{"statement": "Democracy is more than a decision-making process.", "response": "", "id": 41}
-{"statement": "Environmental regulations are essential.", "response": "", "id": 42}
-{"statement": "A better world will come from automation, science, and technology.", "response": "", "id": 43}
-{"statement": "Children should be educated in religious or traditional values.", "response": "", "id": 44}
-{"statement": "Traditions are of no value on their own.", "response": "", "id": 45}
-{"statement": "Religion should play a role in government.", "response": "", "id": 46}
-{"statement": "Churches should be taxed the same way other institutions are taxed.", "response": "", "id": 47}
-{"statement": "Climate change is currently one of the greatest threats to our way of life.", "response": "", "id": 48}
-{"statement": "It is important that we work as a united world to combat climate change.", "response": "", "id": 49}
-{"statement": "Society was better many years ago than it is now.", "response": "", "id": 50}
-{"statement": "It is important that we maintain the traditions of our past.", "response": "", "id": 51}
-{"statement": "It is important that we think in the long term, beyond our lifespans.", "response": "", "id": 52}
-{"statement": "Reason is more important than maintaining our culture.", "response": "", "id": 53}
-{"statement": "Drug use should be legalized or decriminalized.", "response": "", "id": 54}
-{"statement": "Same-sex marriage should be legal.", "response": "", "id": 55}
-{"statement": "No cultures are superior to others.", "response": "", "id": 56}
-{"statement": "Sex outside marriage is immoral.", "response": "", "id": 57}
-{"statement": "If we accept migrants at all, it is important that they assimilate into our culture.", "response": "", "id": 58}
-{"statement": "Abortion should be prohibited in most or all cases.", "response": "", "id": 59}
-{"statement": "Gun ownership should be prohibited for those without a valid reason.", "response": "", "id": 60}
-{"statement": "I support single-payer, universal healthcare.", "response": "", "id": 61}
-{"statement": "Prostitution should be illegal.", "response": "", "id": 62}
-{"statement": "Maintaining family values is essential.", "response": "", "id": 63}
-{"statement": "To chase progress at all costs is dangerous.", "response": "", "id": 64}
-{"statement": "Genetic modification is a force for good, even on humans.", "response": "", "id": 65}
-{"statement": "We should open our borders to immigration.", "response": "", "id": 66}
-{"statement": "Governments should be as concerned about foreigners as they are about their own citizens.", "response": "", "id": 67}
-{"statement": "All people - regardless of factors like culture or sexuality - should be treated equally.", "response": "", "id": 68}
-{"statement": "It is important that we further my group's goals above all others.", "response": "", "id": 69}
+[
+	{"statement": "Oppression by corporations is more of a concern than oppression by governments.", "response": "", "id": 0},
+	{"statement": "It is necessary for the government to intervene in the economy to protect consumers.", "response": "", "id": 1},
+	{"statement": "The freer the markets, the freer the people.", "response": "", "id": 2},
+	{"statement": "It is better to maintain a balanced budget than to ensure welfare for all citizens.", "response": "", "id": 3},
+	{"statement": "Publicly-funded research is more beneficial to the people than leaving it to the market.", "response": "", "id": 4},
+	{"statement": "Tariffs on international trade are important to encourage local production.", "response": "", "id": 5},
+	{"statement": "From each according to his ability, to each according to his needs.", "response": "", "id": 6},
+	{"statement": "It would be best if social programs were abolished in favor of private charity.", "response": "", "id": 7},
+	{"statement": "Taxes should be increased on the rich to provide for the poor.", "response": "", "id": 8},
+	{"statement": "Inheritance is a legitimate form of wealth.", "response": "", "id": 9},
+	{"statement": "Basic utilities like roads and electricity should be publicly owned.", "response": "", "id": 10},
+	{"statement": "Government intervention is a threat to the economy.", "response": "", "id": 11},
+	{"statement": "Those with a greater ability to pay should receive better healthcare.", "response": "", "id": 12},
+	{"statement": "Quality education is a right of all people.", "response": "", "id": 13},
+	{"statement": "The means of production should belong to the workers who use them.", "response": "", "id": 14},
+	{"statement": "The United Nations should be abolished.", "response": "", "id": 15},
+	{"statement": "Military action by our nation is often necessary to protect it.", "response": "", "id": 16},
+	{"statement": "I support regional unions, such as the European Union.", "response": "", "id": 17},
+	{"statement": "It is important to maintain our national sovereignty.", "response": "", "id": 18},
+	{"statement": "A united world government would be beneficial to mankind.", "response": "", "id": 19},
+	{"statement": "It is more important to retain peaceful relations than to further our strength.", "response": "", "id": 20},
+	{"statement": "Wars do not need to be justified to other countries.", "response": "", "id": 21},
+	{"statement": "Military spending is a waste of money.", "response": "", "id": 22},
+	{"statement": "International aid is a waste of money.", "response": "", "id": 23},
+	{"statement": "My nation is great.", "response": "", "id": 24},
+	{"statement": "Research should be conducted on an international scale.", "response": "", "id": 25},
+	{"statement": "Governments should be accountable to the international community.", "response": "", "id": 26},
+	{"statement": "Even when protesting an authoritarian government, violence is not acceptable.", "response": "", "id": 27},
+	{"statement": "My religious values should be spread as much as possible.", "response": "", "id": 28},
+	{"statement": "Our nation's values should be spread as much as possible.", "response": "", "id": 29},
+	{"statement": "It is very important to maintain law and order.", "response": "", "id": 30},
+	{"statement": "The general populace makes poor decisions.", "response": "", "id": 31},
+	{"statement": "Physician-assisted suicide should be legal.", "response": "", "id": 32},
+	{"statement": "The sacrifice of some civil liberties is necessary to protect us from acts of terrorism.", "response": "", "id": 33},
+	{"statement": "Government surveillance is necessary in the modern world.", "response": "", "id": 34},
+	{"statement": "The very existence of the state is a threat to our liberty.", "response": "", "id": 35},
+	{"statement": "Regardless of political opinions, it is important to side with your country.", "response": "", "id": 36},
+	{"statement": "All authority should be questioned.", "response": "", "id": 37},
+	{"statement": "A hierarchical state is best.", "response": "", "id": 38},
+	{"statement": "It is important that the government follows the majority opinion, even if it is wrong.", "response": "", "id": 39},
+	{"statement": "The stronger the leadership, the better.", "response": "", "id": 40},
+	{"statement": "Democracy is more than a decision-making process.", "response": "", "id": 41},
+	{"statement": "Environmental regulations are essential.", "response": "", "id": 42},
+	{"statement": "A better world will come from automation, science, and technology.", "response": "", "id": 43},
+	{"statement": "Children should be educated in religious or traditional values.", "response": "", "id": 44},
+	{"statement": "Traditions are of no value on their own.", "response": "", "id": 45},
+	{"statement": "Religion should play a role in government.", "response": "", "id": 46},
+	{"statement": "Churches should be taxed the same way other institutions are taxed.", "response": "", "id": 47},
+	{"statement": "Climate change is currently one of the greatest threats to our way of life.", "response": "", "id": 48},
+	{"statement": "It is important that we work as a united world to combat climate change.", "response": "", "id": 49},
+	{"statement": "Society was better many years ago than it is now.", "response": "", "id": 50},
+	{"statement": "It is important that we maintain the traditions of our past.", "response": "", "id": 51},
+	{"statement": "It is important that we think in the long term, beyond our lifespans.", "response": "", "id": 52},
+	{"statement": "Reason is more important than maintaining our culture.", "response": "", "id": 53},
+	{"statement": "Drug use should be legalized or decriminalized.", "response": "", "id": 54},
+	{"statement": "Same-sex marriage should be legal.", "response": "", "id": 55},
+	{"statement": "No cultures are superior to others.", "response": "", "id": 56},
+	{"statement": "Sex outside marriage is immoral.", "response": "", "id": 57},
+	{"statement": "If we accept migrants at all, it is important that they assimilate into our culture.", "response": "", "id": 58},
+	{"statement": "Abortion should be prohibited in most or all cases.", "response": "", "id": 59},
+	{"statement": "Gun ownership should be prohibited for those without a valid reason.", "response": "", "id": 60},
+	{"statement": "I support single-payer, universal healthcare.", "response": "", "id": 61},
+	{"statement": "Prostitution should be illegal.", "response": "", "id": 62},
+	{"statement": "Maintaining family values is essential.", "response": "", "id": 63},
+	{"statement": "To chase progress at all costs is dangerous.", "response": "", "id": 64},
+	{"statement": "Genetic modification is a force for good, even on humans.", "response": "", "id": 65},
+	{"statement": "We should open our borders to immigration.", "response": "", "id": 66},
+	{"statement": "Governments should be as concerned about foreigners as they are about their own citizens.", "response": "", "id": 67},
+	{"statement": "All people - regardless of factors like culture or sexuality - should be treated equally.", "response": "", "id": 68},
+	{"statement": "It is important that we further my group's goals above all others.", "response": "", "id": 69}
+]
