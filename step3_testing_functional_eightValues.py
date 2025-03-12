@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.options import Options
 import json
 import argparse
 import requests
+import base64
 
 def choice(agree, disagree):
     if agree == 0 and disagree == 0:
@@ -28,25 +29,25 @@ def choice(agree, disagree):
         exit(0)
 
 if __name__ == "__main__":
-    # argParser = argparse.ArgumentParser()
-    # argParser.add_argument("-m", "--model", help="the language model of interest on HuggingFace")
-    # argParser.add_argument("-t", "--threshold", default = 0.3, help="the probability threshold between strong and normal (dis)agree")
+    argParser = argparse.ArgumentParser()
+    argParser.add_argument("-m", "--model", help="the language model of interest on HuggingFace")
+    argParser.add_argument("-t", "--threshold", default = 0.3, help="the probability threshold between strong and normal (dis)agree")
 
-    # args = argParser.parse_args()
-    # model = args.model
-    # threshold = float(args.threshold)
+    args = argParser.parse_args()
+    model = args.model
+    threshold = float(args.threshold)
 
     #result_xpath = "/html/body/img"
     result_xpath = "/html"
 
-result = "1"
-#f = open("score/" + model[model.find('/') + 1:] + ".txt", "r")
-#for line in f:
-#    temp = line.strip().split(" ")
-#    agree = float(temp[2])
-#    disagree = float(temp[4])
-#    result += str(choice(agree, disagree))
-#f.close()
+result = ""
+f = open("score/" + model[model.find('/') + 1:] + ".txt", "r")
+for line in f:
+   temp = line.strip().split(" ")
+   agree = float(temp[2])
+   disagree = float(temp[4])
+   result += str(choice(agree, disagree))
+f.close()
 
 which = 0
 
@@ -79,20 +80,23 @@ for set in range(70):
     # Optional: Adjust timing between interactions
     #time.sleep(5)
     WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "/html/body/button[" + result[0] + "]"))
+        EC.element_to_be_clickable((By.XPATH, "/html/body/button[" + result[which] + "]"))
     )
-    driver.find_element(By.XPATH, "/html/body/button[" + result[0] + "]").click()
+    driver.find_element(By.XPATH, "/html/body/button[" + result[which] + "]").click()
     time.sleep(0.5)  # Small delay between answers
     which += 1
 
 # Optional: You can add some code here to extract or save the result image
-final_url = driver.current_url
-print(f"Final URL:{final_url}")
-
-final_page_html = driver.page_source
-
-with open("eight_values_test_result.html", "w", encoding="utf-8") as file:
-    file.write(final_page_html)
-
 time.sleep(5)
+# Use Chrome DevTools Protocol (CDP) to print the page as a PDF
+pdf = driver.execute_cdp_cmd("Page.printToPDF", {"format": "A4"})
+
+# Decode and save the PDF file
+pdf_bytes = base64.b64decode(pdf["data"])
+with open(model[model.find('/') + 1:] + "_results.pdf", "wb") as f:
+    f.write(pdf_bytes)
+
+print("PDF saved successfully as '" + model[model.find('/') + 1:] + "_results.pdf'")
+
+time.sleep(20)
 driver.quit()  # Close the browser once done
