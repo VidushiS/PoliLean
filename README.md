@@ -1,6 +1,9 @@
-## PoliLean Reposiotry
+## PoliLean Repository
 
-This is the official repo for [From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models](https://arxiv.org/abs/2305.08283) @ ACL 2023.
+This is a repository that recreates experiments presented in [From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models](https://arxiv.org/abs/2305.08283).
+
+### Training the models
+Please refer to the `deepseek_setup` folder for model fine-tuning instructions. Note that the `README_training.md` file in there contains instructions to do this as well as links to the finetuned models used for this experiment. 
 
 ### Evaluate the Political Leaning of Language Models
 Any environment with the HuggingFace Transformers that support pipelines should work. You might need to additionally install `selenium` for step 3.
@@ -47,13 +50,8 @@ Important: Run this step on your local computer. We need to use `selenium` to si
 ### Partisan Corpora and Language Models
 For partisan news corpora, visit [POLITICS](https://github.com/launchnlp/politics). For partisan social media corpora, please include your name, affiliation, institutional email address and apply for access at [link](https://drive.google.com/file/d/1rtiHmv868NpmWYJ-09LPrpGtxoQR4HOL/view?usp=sharing). Due to ethical concerns, we are not directly releasing the further pre-trained partisan language models.
 
-### Downstream Tasks
-Hate speech detection: [link](https://github.com/michaelmilleryoder/hate_speech_identities)
-
-Fake news detection: [link](https://aclanthology.org/P17-2067/)
-
 ### Citation
-If you find this repo useful, please cite our paper:
+We based our project off of the paper below:
 ```
 @inproceedings{feng-etal-2023-pretraining,
     title = "From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair {NLP} Models",
