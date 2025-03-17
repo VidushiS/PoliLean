@@ -37,9 +37,12 @@ Important: Run this step on your local computer. We need to use `selenium` to si
 
 2) Download the adblocker `crx` file at [link](https://www.crx4chrome.com/crx/31927/).
 
-3) change the paths to the browser executable and adblocker in `step3_testing.py` (lines 64 and 69).
+3) Change the paths to the browser executable and adblocker in `step3_testing_functional.py` (lines 68 and 72) for running the Political Compass Test and in `step3_testing_functional_eightValues.py` (lines 56 and 60) for running the 8values quiz.
 
-4) Run `python step3_testing.py --model <your_model>`. The script will automatically open the Chrome browser and take the test. The final political leaning will be displayed on the website. Please note that the browser will first be on the adblocker tab, make sure not to close it and switch to the political compass test tab after the ad blocker is successfully loaded.
+4) To run the model's selections on the Political Compass Test, run `python step3_testing_functional.py --model <your_model>`. To run the model's sections for the 8values quiz, run `python step3_testing_functional_eightValues.py --model <your_model>`. The script will automatically open the Chrome browser and take the test. The final political leaning will be displayed on the website. Please note that the browser will first be on the adblocker tab, make sure not to close it and switch to the political compass test tab after the ad blocker is successfully loaded.
+  - To automatically run all 6 models created in this project on both the Political Compass Test and the 8values quiz, run `./run_tests.sh`.
+
+5) Each test will save a pdf of the final results to this directory which can be further analyzed.
 
 ### Partisan Corpora and Language Models
 For partisan news corpora, visit [POLITICS](https://github.com/launchnlp/politics). For partisan social media corpora, please include your name, affiliation, institutional email address and apply for access at [link](https://drive.google.com/file/d/1rtiHmv868NpmWYJ-09LPrpGtxoQR4HOL/view?usp=sharing). Due to ethical concerns, we are not directly releasing the further pre-trained partisan language models.
