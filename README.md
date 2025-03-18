@@ -3,7 +3,7 @@
 This is a repository that recreates experiments presented in [From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models](https://arxiv.org/abs/2305.08283).
 
 ### Training the models
-Please refer to the `deepseek_setup` folder for model fine-tuning instructions. Note that the `README_training.md` file in there contains instructions to do this as well as links to the finetuned models used for this experiment. 
+Please refer to the `deepseek_setup` folder for model fine-tuning instructions. Note that the `README_training.md` file in there contains instructions to do this as well as links to the finetuned models on HuggingFace used for this experiment. 
 
 ### Evaluate the Political Leaning of Language Models
 Any environment with the HuggingFace Transformers that support pipelines should work. You might need to additionally install `selenium` for step 3.
