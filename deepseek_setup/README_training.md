@@ -39,6 +39,7 @@ python push_to_hub.py --source-dir (path_to_where_model_is_stored) --output_dir 
 This will push the model and processor up to Huggingface.
 
 ### Model Checkpoints
+For the purposes of grading our course project I went ahead and made these models public for now. Once you are done with verifying the work we have done, I will make sure to make these repositories private immediately
 - [reddit right model](https://huggingface.co/vsingh1221/deepseek_1.5_reddit_right)
 - [reddit center model](https://huggingface.co/vsingh1221/deepseek_1.5_reddit_center)
 - [reddit left model](https://huggingface.co/vsingh1221/deepseek_1.5_reddit_left)
