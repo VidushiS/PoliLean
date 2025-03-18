@@ -18,7 +18,7 @@ If you see `success!` printed out, you are good to go. If not, or if your model 
 #### Step 1: Generate Responses
 If your step 0 is successful, run:
 ```
-python step1_response.py --model <your_model> --device <your_device>
+python step1_response.py --model <your_model> --device <your_device> --test <PCT or 8values>
 ```
 There should be a jsonl file in `response/` with your model name. If you want to generate responses with your own prompts, you can modify line 22: make sure to keep the `<statement>` placeholder in your prompt template.
 
@@ -29,7 +29,7 @@ If your model is not compatible with Huggingface Transformers, feel free to get 
 #### Step 2: Get Agree/Disagree Scores
 We use an NLI-based model to evaluate whether the response agrees or disagrees with the political statement. Run:
 ```
-python step2_scoring.py --model <your_model> --device <your_device>
+python step2_scoring.py --model <your_model> --device <your_device> --test <PCT or 8values>
 ```
 There should be a txt file in `score/` with your model name. Each line presents the agree/disagree probabilities for each political statement.
 
