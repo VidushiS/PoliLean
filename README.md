@@ -52,7 +52,7 @@ Important: Run this step on your local computer. We need to use `selenium` to si
 5) Each test will save a pdf of the final results to this directory which can be further analyzed.
 
 ### Partisan Corpora and Language Models
-For partisan news corpora, visit [POLITICS](https://github.com/launchnlp/politics). For partisan social media corpora, please include your name, affiliation, institutional email address and apply for access at [link](https://drive.google.com/file/d/1rtiHmv868NpmWYJ-09LPrpGtxoQR4HOL/view?usp=sharing). Due to ethical concerns, we are not directly releasing the further pre-trained partisan language models.
+For partisan news corpora, visit [POLITICS](https://github.com/launchnlp/politics). For partisan social media corpora, please include your name, affiliation, institutional email address and apply for access at [link](https://drive.google.com/file/d/1rtiHmv868NpmWYJ-09LPrpGtxoQR4HOL/view?usp=sharing).
 
 ### Citation
 We based our project off of the paper below:
