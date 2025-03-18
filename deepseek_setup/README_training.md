@@ -11,7 +11,7 @@ The BIGNEWSBLN dataset requires further preprocessing due to all of the data bei
 
 Once you have done that run the command below to pretty-print the data onto multiple lines (yet retain the array list format) and to re-encode unencoded characters:
 ```
-cat (path_to_raw_dataset).json | jq ‘. | {text: .text}’ | jq -s > (output_file).json
+cat (path_to_raw_dataset).json | jq '.[] | {text: .text}' | jq -s > (output_file).json
 ```
 
 Use the json file containing the processed data for any model training.

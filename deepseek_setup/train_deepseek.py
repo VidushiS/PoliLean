@@ -42,21 +42,32 @@ def main(args: Namespace):
     output_dir= args.output_dir
     percent_train = args.percent
     ds_right = None
+    print(data_file_type)
     if data_file_type == "json": 
         features = Features({'text': Sequence(feature=Value(dtype='large_string'))})
         ds_right = load_dataset("json", data_files=data_file, split=f"train[:{percent_train}%]", features=features)
-    elif data_file_type = "txt":
+    elif data_file_type == "txt":
         ds_right = load_dataset("text", data_files=data_file, split=f"train[:{percent_train}%]")
 
     print(ds_right)
     print(ds_right[0]['text'])
-
-    tokenized_datasets = ds_right.map(
-        tokenize_news_fcn, batched=True, num_proc=4, remove_columns=ds_right.column_names
-    )
+    tokenized_dataset = None
+    if data_file_type == "json":
+        tokenized_datasets = ds_right.map(
+            tokenize_news_fcn, batched=True, num_proc=4, remove_columns=ds_right.column_names
+        )
+    elif data_file_type == "txt":
+        tokenized_datasets = ds_right.map(
+            tokenize_fcn, batched=True, num_proc=4, remove_columns=ds_right.column_names
+        )
+    
     print(tokenized_datasets)
     print(tokenized_datasets[0]['input_ids'])
-    lm_dataset = tokenized_datasets.map(group_texts, batched=True, num_proc=4)
+    lm_dataset = None
+    if data_file_type == "json":
+        lm_dataset = tokenized_datasets.map(group_texts, batched=True, num_proc=4)
+    elif data_file_type == "txt":
+        lm_dataset = tokenized_datasets
     print(lm_dataset)
     print(lm_dataset[0]['input_ids'])
 
