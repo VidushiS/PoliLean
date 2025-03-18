@@ -2,6 +2,9 @@
 
 This README contains instructions for training the DeepSeek Distilled Model mentioned in the paper for full reproducibility of results. If you want to skip the model training and instead go straight to inference, the models used for this project are publicly available on HuggingFace and links to them are provided in the [Model Checkpoints](#model-checkpoints) Section
 
+### Environment Setup
+Virtual Environment was used to setup a space in order to run these experiments. The python version was 3.9.14. Once the environment was activated the requirements outlined in the `requirements_training.py` were pip installed
+
 ### Preprocessing the Data
 Please refer to the README in the main directory for information on how to receive access to the partisan media and BIGNEWSBLN datasets. These instructions assume that you already have access to both datasets.
 
