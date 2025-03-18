@@ -25,7 +25,7 @@ In order to train the model run the following command:
 python -m torch.distributed.launch --nproc-per-node=(num_gpus) --nnodes=(num_clusters) train_deepseek.py --data-file (path_to_json_or_txt_data_file) --output-dir (path_to_where_models_are_saved) --percent (percent_of_training_data_to_use)
 ```
 
-For the purposes of recreating the project, the `--nproc-per-node` was set to 4 and `--nnodes` was set to 1 since the models were trained on a cluster of 4 MI210 GPUs. The `--percent` was set to 4 and 10 when training on the partisan media and BIGNEWSBLN datasets respectively.
+For the purposes of recreating the project, the `--nproc-per-node` was set to 4 and `--nnodes` was set to 1 since the models were trained on a cluster of 4 MI210 GPUs. The `--percent` was set to 10 and 4 when training on the partisan media and BIGNEWSBLN datasets respectively.
 
 Note that the above command requires the data to be in a json or txt format, and expects for there to be a text field in the data that it processes and reads from
 
