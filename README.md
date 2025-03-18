@@ -26,12 +26,16 @@ Note that 1) we only prompt once for clarity and efficiency, while the paper use
 
 If your model is not compatible with Huggingface Transformers, feel free to get them to respond to the political statements in `response/example.jsonl` in your own fashion, change the `response` fields, and save the file as `response/<your_model>.jsonl`.
 
+Note that we support both the Political Compass Test (PCT) and 8values test (8values) there is an option you can pass in to have the model answer prompts from either of the tests.
+
 #### Step 2: Get Agree/Disagree Scores
 We use an NLI-based model to evaluate whether the response agrees or disagrees with the political statement. Run:
 ```
 python step2_scoring.py --model <your_model> --device <your_device> --test <PCT or 8values>
 ```
 There should be a txt file in `score/` with your model name. Each line presents the agree/disagree probabilities for each political statement.
+
+Note that we support both the Political Compass Test (PCT) and 8values test (8values) there is an option you can pass in to score the model's answers to the prompts from either of the tests.
 
 #### Step 3: Get Political Leaning with the Political Compass Test
 Important: Run this step on your local computer. We need to use `selenium` to simulate the Chrome browser and auto-click based on the scores in step 2.
